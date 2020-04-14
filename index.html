@@ -1,34 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Covid 19 Estimator</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Capstone">
+    <meta name="Joseph Koech" content="Owner">
+    <meta name="keywords" content="SDG">
+    <link rel="stylesheet" href="css/text.css">
+    <title>Building for SDGs</title>
+</head>
+
 
 <body>
+        <header>
+            <h1>Covid 19 <span class="light">Estimator</span></h1>
+            <div class="novelty">
+                <p> This is a <u>Novelty Tool</u> that can help society and leaders prepare for the real big problem of COVID-19, which is impacting on <b>lives</b>, <b>health systems</b>, <b>supply chains</b>, and <b>the economy</b>:</p>
+            </div>
+            <h3><u class="light">The <span class="light">COVID-19</span> Estimator Tool</u></h3>
+        </header>
+    
+    <div class="sub">
+        <form action="/action_page.php" class="form">
+            <fieldset>
+                <legend>The COVID 19 Estimator:</legend>
+                <label for="data-region">Region:</label><br>
+                <input type="text" data-region="Region" name="Population" id="data-region" placeholder="Africa" required><br>
 
-    <h1>Covid 19 Estimator</h1>
+                <label for="data-avgAge">Region Average age:</label><br>
+                <input type="text" avgAge ="population" name="Average Age" id="data-avgAge" placeholder="Enter average age for this region" required><br>
 
-    <form action="index.html">
-        <label>Population</label>
-        <input type="number" placeholder="Population" data-population>
+                <label for="data-avgDailyIncomeInUSD">Region Average Daily Income (USD):</label><br>
+                <input type="text" avgAge="population" name="Average Age" id="data-avgDailyIncomeInUSD" placeholder="Enter daily population income in USD" required><br>
 
-        <label>Time to Elapse</label>
-        <input placeholder="Time To Elapse" type="number" data-time-to-elapse>
+                <label for="data-avgDailyIncomePopulation">Region Average Daily Income Population:</label><br>
+                <input type="text" data-avgDailyIncomePopulation ="population" name="Average Age" id="data-avgDailyIncomePopulation" placeholder="Enter average income population for this region" required><br>
 
-        <label>Reported Cases</label>
-        <input type="number" placeholder="Reported Cases" data-reported-cases>
+                <label for="data-population">Population:</label><br>
+                <input type="text" data-population="population" name="Population"id="data-population" placeholder="Enter population for region/city..." required><br>
 
-        <label>Total Hospital Beds</label>
-        <input type="number" placeholder="Total Hospital Beds" data-total-hospital-beds>
+                <label for="data-time-to-elapse">Time To Elapse:</label><br>
+                <input type="text" data-time-to-elapse="timeToElapse" name="Period" id="data-time-to-elapse" placeholder="Enter Time in Days/Weeks/Months..." required><br>
 
-        <label for="periodType">Period:</label>
+                <label for="data-reported-cases">Reported Cases:</label><br>
+                <input type="text" data-reported-cases="reportedCases" name="Reported Cases" id="data-reported-cases" placeholder="Home many reported cases?" required><br>
 
-        <select id="periodType" data-period-type>
-            <option value="days" selected>Days</option>
-            <option value="weeks">Weeks</option>
-            <option value="months">months</option>>
-        </select>
-        <button data-go-estimate>Submit</button>
-    </form>
+                <label for="data-total-hospital-beds">Total Hospital Beds:</label><br>
+                <input type="text" data-total-hospital-beds="totalHospitalBeds" name="Beds" id="data-total-hospital-beds" placeholder="How many availaible beds?" required><br>
 
+                <label for="data-period-type">Period Type:</label><br>
+                <select data-period-type="periodType" id="data-period-type" name="periodType" required>
+                    <option value="Days">Days</option>
+                    <option value="Weeks">Weeks</option>
+                    <option value="Months">Months</option>
+                </select>
+
+                <input type="submit" data-go-estimate="data-go-estimate"  value="Check Estimates" id="data-go-estimate">
+            </fieldset>
+        </form>
+    </div>
+
+
+    <footer>
+        <p>The Covid 19 Estimator - Building4SDGs Andela Project by Joseph Koech, Copyright &copy; 2020</p>
+    </footer>
 </body>
 
 </html>
