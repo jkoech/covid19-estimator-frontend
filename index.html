@@ -1,101 +1,34 @@
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="#000000">
-    <meta name="description" content="Covid 19 Estimator">
-    <title>Covid 19 Estimator App
-    </title>
-    <style>
-        body {
-            padding: 2px
-        }
-    </style>
-</head>
+<title>Covid 19 Estimator</title>
 
 <body>
 
-    <div id="root">
+    <h1>Covid 19 Estimator</h1>
 
-        <div class="ui container">
+    <form action="index.html">
+        <label>Population</label>
+        <input type="number" placeholder="Population" data-population>
 
-            <div class="main ui text container">
+        <label>Time to Elapse</label>
+        <input placeholder="Time To Elapse" type="number" data-time-to-elapse>
 
-                <form class="ui form">
-                    <h4 class="ui dividing header">Covid 19 Estimator</h4>
+        <label>Reported Cases</label>
+        <input type="number" placeholder="Reported Cases" data-reported-cases>
 
-                    <div class="two fields">
+        <label>Total Hospital Beds</label>
+        <input type="number" placeholder="Total Hospital Beds" data-total-hospital-beds>
 
-                        <div class="field">
-                            <label>Population
-                            </label>
-                            <input type="number" placeholder="Population" data-population="true" value="">
-                        </div>
+        <label for="periodType">Period:</label>
 
-                        <div class="field">
-                            <label>Time to Elapse
-                            </label>
-                            <input placeholder="Time To Elapse" type="number" data-time-to-elapse="true" value="">
-                        </div>
-                    </div>
+        <select id="periodType" data-period-type>
+            <option value="days" selected>Days</option>
+            <option value="weeks">Weeks</option>
+            <option value="months">months</option>>
+        </select>
+        <button data-go-estimate>Submit</button>
+    </form>
 
-                    <div class="two fields">
-
-                        <div class="field">
-                            <label>Reported Cases
-                            </label>
-                            <input type="number" placeholder="Reported Cases" data-reported-cases="true" value="">
-                        </div>
-
-                        <div class="field">
-                            <label>Total Hospital Beds
-                            </label>
-                            <input type="number" placeholder="Total Hospital Beds" data-total-hospital-beds="true"
-                                value="">
-                        </div>
-
-                        <div class="field">
-                            <label>Period
-                            </label>
-
-                            <div data-period-type="true" role="listbox" aria-expanded="false"
-                                class="ui fluid selection dropdown" tabindex="0">
-
-                                <div class="text" role="alert" aria-live="polite" aria-atomic="true">Weeks
-                                </div><i aria-hidden="true" class="dropdown icon"></i>
-
-                                <div class="menu transition">
-
-                                    <div role="option" aria-checked="false" aria-selected="false" class="item"
-                                        style="pointer-events: all;">
-
-                                        <span class="text">Days
-                                        </span>
-                                    </div>
-
-                                    <div role="option" aria-checked="true" aria-selected="true"
-                                        class="active selected item" style="pointer-events: all;">
-
-                                        <span class="text">Weeks
-                                        </span>
-                                    </div>
-
-                                    <div role="option" aria-checked="false" aria-selected="false" class="item"
-                                        style="pointer-events: all;">
-
-                                        <span class="text">Months
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div><button data-go-estimate="true" class="ui button">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>
